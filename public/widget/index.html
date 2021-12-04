@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Prosemirror-widget</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+</head>
+
+<body>
+	<div id="ProseMirrorYjs"></div>
+
+	<link rel='stylesheet' href='/prosemirror-yjs.css'>
+	<script src='/build/prosemirror-yjs.js'></script>
+	<script>
+		new ProseMirrorYjs({
+			target: document.getElementById("ProseMirrorYjs"),
+			props: {
+				useLocalStorage: true,
+				wssServerPath: "wss://demos.yjs.dev",
+				channelName: "prosemirror-discours.io-demo"
+			}
+		});
+	</script>
+</body>
+
+</html>
